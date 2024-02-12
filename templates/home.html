@@ -10,14 +10,20 @@
         height: 440px;
         width: 100%;
       }
-    </style>  
+    </style> 
+    <img class="img-fluid" id= "banner" src = "https://8c9c7a59-d31e-47e8-9881-c3f5fa39183e-00-o7udd1cqnolg.pike.replit.dev/static/Banner.jpg">
   <body>
+    {% include 'nav.html' %}
     <div class = "container">
        <h1 class = "text-center mt-2 mb-4">Product Jobs</h1>
-       <img class="img-fluid" id= "banner" src = "https://8c9c7a59-d31e-47e8-9881-c3f5fa39183e-00-o7udd1cqnolg.pike.replit.dev/static/Banner.jpg">
-       <h2 class = "text-center mt-2 mb-4">About Product Jobs</h2>
-       <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-
+    <div class ="row" style=margin-bottom:16px">  
+    <div class="col-md-6">  
+       <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore uolsgdge sgskidgd shvdid gdhd sdhdhd dgdgd dhdhd </p>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+      <img src = "/static/people.avif" style = "height: 320px; border-radius: 4px;">
+    </div>
+    </div>
        <h2 class = "text-center mt-2 mb-4">Open Positions</h2>
       <div>
          {% for job in jobs %}
@@ -25,9 +31,9 @@
          {% endfor %}
     </div>
        <div class="text-center">  
-       <button type="button" class="btn btn-secondary">Contact Us</button>
-         <p>copyright 2022</p>
+       <a href="mailto:career@productjobs.com?subject=Question%20about%20Job%20Openings&body=Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AQuestion%3A%20%3CPut%20your%20question%20here%3E" type="button" class="btn btn-primary">Contact Us</a>
        </div>  
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
